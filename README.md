@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/roi-spectrum.png" height="300" alt="ROI">
+  <img src="assets/roi-spectrum.png" height="150" alt="ROI">
 </p>
 
 # ROI - A line well parsed
