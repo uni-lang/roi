@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="assets/roi-spectrum.png" height="70" alt="µUni">
+  <img src="assets/roi-spectrum.png" height="300" alt="ROI">
 </p>
 
-# ROI -- A line well parsed
+# ROI - A line well parsed
 
 <p align="center">
   <a href="#">
