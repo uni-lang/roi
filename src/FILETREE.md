@@ -10,3 +10,10 @@ interpreter. This file is intended to specify the file and folders structure.
 # Dependencies
 Only files ended with 'handler.h' can call external depencies such as stdio,
 stdlib etc.
+
+
+# Naming convention
+Names ended with '_t' relates to structs.
+CamelCase started with uppercase relates typedef structs (almost classes)
+camelCase started with lowercase relates to functions
+  
