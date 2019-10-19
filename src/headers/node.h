@@ -4,7 +4,9 @@
 #include "memoryhandler.h"
 
 typedef struct node_t {
-    struct node_t   *right,
+    struct node_t   *up,
+                    *bottom,
+                    *right,
                     *left;
     void *data;
 } node_t;
