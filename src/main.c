@@ -20,9 +20,8 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #include "headers/node.h"
 
 int main(){
-    node_t aux;
-    
-    printf("hello world\n");
 
+    node_t * aux;
 
+    return 0;
 }
