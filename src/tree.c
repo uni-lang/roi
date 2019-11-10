@@ -26,7 +26,6 @@ void treePreOrderRec(node_t *__root, void (*__callback)(void *__data))
     }
 }
 
-
 void treePostOrderRec(node_t *__root, void (*__callback)(void *__data))
 {
     if(__root != NULL){

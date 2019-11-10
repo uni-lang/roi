@@ -10,6 +10,10 @@ void printdata(void *__data){
     }
 }
 
+void freeCallback(void *__data){
+    free(__data);
+}
+
 node_t *btreeAdd(node_t *__root, int n)
 {
     if(__root != NULL){
@@ -36,10 +40,12 @@ int main(){
     curr = root;
 */
 
-    srand(time(NULL)); 
+    srand(time(NULL));
     for(int i = 0; i < 500; i++){
         root = btreeAdd(root, rand());
     }
 
     treeInOrderRec(root, printdata);
+    nodeRecFree(root,freeCallback);
+
 }

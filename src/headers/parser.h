@@ -4,7 +4,7 @@
 #include "node.h"
 #include "binarytree.h"
 
-/*  Primitive parser v0.
+/** Primitive parser v0.
     returns a pointer to the AST root*/
 node_t *parserPrimitive(char *__str);
 

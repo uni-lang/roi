@@ -3,16 +3,16 @@
 
 #include <stdio.h>
 
-/* Write formatted output to stdout.
+/** Write formatted output to stdout.
 
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
+    This function is a possible cancellation point and therefore not
+    marked with __THROW.  */
 extern int printf (const char *__restrict __format, ...);
 
-/* Read formatted input from stdin.
+/** Read formatted input from stdin.
 
-   This function is a possible cancellation point and therefore not
-   marked with __THROW.  */
+    This function is a possible cancellation point and therefore not
+    marked with __THROW.  */
 extern int scanf (const char *__restrict __format, ...) __wur;
 
 #endif

@@ -32,6 +32,7 @@ void nodeFree(node_t *__node)
     freeMem(__node);
 }
 
+/*
 void nodeRecFree(node_t *__node)
 {
     if(__node != NULL){
@@ -42,6 +43,24 @@ void nodeRecFree(node_t *__node)
             nodeRecFree(__node->left);
         }
 
+        freeMem(__node);
+    }else{
+        //throw exception
+    }
+}
+*/
+
+void nodeRecFree(node_t *__node, void (*__callback)(void *__data))
+{
+    if(__node != NULL){
+        if(__node->right != NULL){
+            nodeRecFree(__node->right,__callback);
+        }
+        if(__node->left != NULL){
+            nodeRecFree(__node->left,__callback);
+        }
+
+        __callback(__node->data);
         freeMem(__node);
     }else{
         //throw exception
