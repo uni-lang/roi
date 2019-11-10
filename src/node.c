@@ -51,7 +51,7 @@ void nodeRecFree(node_t *__node)
 byte nodeLink(node_t *__base, node_t *__tolink, int __linkdir)
 {
     if(__base != NULL && __tolink != NULL){
-        if(__link == NODE_LINK_LEFT){
+        if(__linkdir == NODE_LINK_LEFT){
             __base->left = __tolink;
         }else{
             __base->right = __tolink;
