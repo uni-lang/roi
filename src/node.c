@@ -80,6 +80,15 @@ byte nodeLink(node_t *__base, node_t *__tolink, int __linkdir)
     return FALSE;
 }
 
+node_t  *nodeNew(void *__data)
+{
+        node_t *__aux;
+        __aux = nodeAlloc();
+        __aux->data = __data;
+        return __aux;
+}
+
+
 node_t  *nodeAddChild(node_t *__base, void *__data, int __linkdir)
 {
     if(__base != NULL){

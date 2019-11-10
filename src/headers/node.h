@@ -45,6 +45,10 @@ void    nodeRecFree(node_t *__node, void (*__callback)(void *__data));
     If succeeded it returns 1, else return 0.*/
 byte    nodeLink(node_t *__base, node_t *__tolink, int __linkdir);
 
+/** Create a node with __data and return its pointer
+    If succeded it returns the node's pointer, else returns NULL.*/
+node_t  *nodeNew(void *__data);
+    
 /** Create a parent node with __data, link __base to its LEFT or RIGHT node
     and returns the parent node.
     __linkdir: NODE_LINK_LEFT or NODE_LINK_RIGHT
