@@ -8,15 +8,18 @@
 #define NODE_LINK_LEFT  0
 #define NODE_LINK_RIGHT 1
 
+struct node_t {
+    struct node_t   *right,
+                    *left;
+    void *data;
+};
+
 /**ROI Implementation of dynamic node
    Subvars: node_t * up, bottom, right, left. void * data.
 
    Intended to be used for all dynamic structures: trees, AST, queues, stacks.*/
-typedef struct node_t {
-    struct node_t   *right,
-                    *left;
-    void *data;
-} node_t;
+typedef struct node_t node_t;
+
 
 /**  Alloc a node memory */
 node_t  *nodeAlloc();
