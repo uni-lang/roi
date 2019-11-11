@@ -7,7 +7,8 @@
 struct token_t{
     char operator;
     int weight;
-}
+};
+
 typedef struct token_t token_t;
 
 void freeCallback(void *__data){
@@ -36,18 +37,9 @@ token_t *charToToken(char c){
     return __aux;
 }
 
-node_t *parserPrimitive(char *__str, node_t *cur, node_t *top){
-    node_t *aux;
-    void *data;
+node_t *parserPrimitive(char *__str, node_t *__cur)
+{
 
-    int __strsize = 0;
-    while(__str[__strsize] != '\0') __strsize++;
-
-    if(cur == NULL && cur == NULL){
-        data = malloc(sizeof(char));
-        data = __str[0];
-        cur = nodeAddParent(cur, void *__data, int __linkdir)
-    }
 
 }
 
@@ -56,6 +48,6 @@ int main(){
 
     printf("Expression to parse: ");
     scanf(" %[^\n]",str);
-
+    node_t *root = parserPrimitive(str, NULL);
 
 }
