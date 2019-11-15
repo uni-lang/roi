@@ -2,7 +2,7 @@
   <img src="assets/roi-spectrum.png" height="150" alt="ROI">
 </p>
 
-# ROI - A line well parsed
+# ROI - The rule-oriented interpreter
 
 <p align="center">
   <a href="#">
@@ -15,3 +15,13 @@
     <img src="https://img.shields.io/github/languages/top/uni-lang/roi?style=for-the-badge" style="max-width:100%;" alt="Languages">
   </a>
 </p>
+
+
+
+---
+
+## Credits
+
+* Author: Gustavo Ale
+* GitHub: https://github.com/GustavoAle
+* Email: gustavo.engca@gmail.com

@@ -70,7 +70,6 @@ node_t  *nodeNew(void *__data)
         return __aux;
 }
 
-
 node_t  *nodeAddChild(node_t *__base, void *__data, int __linkdir)
 {
     if(__base != NULL){
