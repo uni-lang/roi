@@ -16,6 +16,10 @@
   </a>
 </p>
 
+## Architecture
+<p align="center">
+	<img src="assets/diagrams/interpreter.png" style="max-width:100%;" alt="ROI Architecture">
+</p>
 
 
 ---
