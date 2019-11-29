@@ -18,13 +18,9 @@
 
 *******************************************************************************/
 
-#include "headers/iohandler.h"
-#include "headers/node.h"
+#ifndef ROI_LEXER_H
+#define ROI_LEXER_H
 
-int main(){
 
-    node_t * aux;
 
-    aux = nodeAlloc();
-    return 0;
-}
+#endif
