@@ -23,7 +23,7 @@
 *******************************************************************************/
 
 #include "headers/deftypes.h"
-#include "headers/memoryhandler.h"
+#include "headers/memhandler.h"
 #include "headers/node.h"
 
 #include "headers/roisys.h"

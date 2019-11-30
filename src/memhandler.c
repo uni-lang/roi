@@ -19,10 +19,10 @@
 *******************************************************************************/
 
 /*******************************************************************************
- * source code related to the memory allocation a freed
+  source code related to the memory allocation and free
 *******************************************************************************/
 
-#include "headers/memoryhandler.h"
+#include "headers/memhandler.h"
 
 /*******************************************************************************
     external dependencies:
@@ -30,10 +30,12 @@
 #include <stdlib.h>
 
 
-void *allocMem(size_t __size){
+void *allocMem(size_t __size)
+{
     return malloc(__size);
 }
 
-void freeMem(void *__ptr){
+void freeMem(void *__ptr)
+{
     free(__ptr);
 }

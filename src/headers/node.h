@@ -21,7 +21,7 @@
 #ifndef ROI_NODE_H
 #define ROI_NODE_H
 
-#include "memoryhandler.h"
+#include "memhandler.h"
 #include "deftypes.h"
 
 
@@ -34,10 +34,10 @@ struct node_t {
     void *data;
 };
 
-/**ROI Implementation of dynamic node
-   Subvars: node_t * up, bottom, right, left. void * data.
+/** ROI Implementation of dynamic node
+    Subvars: node_t * up, bottom, right, left. void * data.
 
-   Intended to be used for all dynamic structures: trees, AST, queues, stacks.*/
+    Intended to be used for all dynamic structures: trees, AST, queues, stacks.*/
 typedef struct node_t node_t;
 
 

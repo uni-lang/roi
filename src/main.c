@@ -21,7 +21,8 @@
 #include "headers/iohandler.h"
 #include "headers/node.h"
 
-int main(){
+int main()
+{
 
     node_t * aux;
 
