@@ -27,5 +27,6 @@ int main()
     node_t * aux;
 
     aux = nodeAlloc();
+
     return 0;
 }
