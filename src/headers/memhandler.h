@@ -31,10 +31,10 @@
     #endif
 /** Allocate a memory with __size bytes
     and then return its pointer*/
-void *allocMem(size_t __size);
+void *alloc_mem(size_t __size);
 
 /** Free a allocated memory.
     Returns nothing.*/
-void freeMem(void *ptr);
+void free_mem(void *ptr);
 
 #endif

@@ -26,7 +26,7 @@
 
 /** Primitive parser v0.
     returns a pointer to the AST root*/
-node_t *parserPrimitive(char *__str);
+node_t *parser_primitive(char *__str);
 
 
 #endif

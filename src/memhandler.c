@@ -30,12 +30,12 @@
 #include <stdlib.h>
 
 
-void *allocMem(size_t __size)
+void *alloc_mem(size_t __size)
 {
     return malloc(__size);
 }
 
-void freeMem(void *__ptr)
+void free_mem(void *__ptr)
 {
     free(__ptr);
 }

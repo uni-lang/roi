@@ -42,10 +42,10 @@ typedef struct node_t node_t;
 
 
 /**  Alloc a node memory */
-node_t  *nodeAlloc();
+node_t  *node_alloc();
 
 /**  Free a node allocated memory, not recursivelly*/
-void    nodeFree(node_t *__node);
+void    node_free(node_t *__node);
 
 /** Free a node allocated memory recursivelly.
     Caution: This function is quite dangerous, use it properly.*/
@@ -54,7 +54,7 @@ void    nodeFree(node_t *__node);
 /** Free a node allocated memory recursivelly.
     The functions then call the __callback function to free the data pointer
     Caution: This function is quite dangerous, use it properly.*/
-void    nodeRecFree(node_t *__node, void (*__callback)(void *__data));
+void    node_free_rec(node_t *__node, void (*__callback)(void *__data));
 
 /*******************************************************************************
                                 TO BE REVISED
@@ -63,23 +63,23 @@ void    nodeRecFree(node_t *__node, void (*__callback)(void *__data));
 /** Link the node __tolink to the right pointer of the __base node.
     __linkdir: NODE_LINK_LEFT or NODE_LINK_RIGHT
     If succeeded it returns 1, else return 0.*/
-byte    nodeLink(node_t *__base, node_t *__tolink, int __linkdir);
+byte    node_link(node_t *__base, node_t *__tolink, int __linkdir);
 
 /** Create a node with __data and return its pointer
     If succeded it returns the node's pointer, else returns NULL.*/
-node_t  *nodeNew(void *__data);
+node_t  *node_new(void *__data);
 
 /** Create a parent node with __data, link __base to its LEFT or RIGHT node
     and returns the parent node.
     __linkdir: NODE_LINK_LEFT or NODE_LINK_RIGHT
     If succeded it returns the child's node, else returns NULL.*/
-node_t  *nodeAddChild(node_t *__base, void *__data, int __linkdir);
+node_t  *node_add_child(node_t *__base, void *__data, int __linkdir);
 
 /** Create a parent node with __data, link __base to its LEFT or RIGHT node
     and returns the parent node.
     __linkdir: NODE_LINK_LEFT or NODE_LINK_RIGHT
     If succeded it returns parent's node, else returns NULL.*/
-node_t  *nodeAddParent(node_t *__base, void *__data, int __linkdir);
+node_t  *node_add_parent(node_t *__base, void *__data, int __linkdir);
 
 
 /******************************************************************************/

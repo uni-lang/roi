@@ -28,14 +28,14 @@
 
 #include "headers/roisys.h"
 
-node_t  *nodeAlloc()
+node_t  *node_alloc()
 {
     node_t *__aux;
 
-    __aux = (node_t*)allocMem(sizeof(node_t));
+    __aux = (node_t*)alloc_mem(sizeof(node_t));
 
     if(__aux == NULL){
-        systemHalt("Node alloc returned NULL pointer");
+        system_halt("Node alloc returned NULL pointer");
         //throw exception
         return NULL;
     }
@@ -47,29 +47,29 @@ node_t  *nodeAlloc()
     return __aux;
 }
 
-void nodeFree(node_t *__node)
+void node_free(node_t *__node)
 {
-    freeMem(__node);
+    free_mem(__node);
 }
 
-void nodeRecFree(node_t *__node, void (*__callback)(void *__data))
+void node_free_rec(node_t *__node, void (*__callback)(void *__data))
 {
     if(__node != NULL){
         if(__node->right != NULL){
-            nodeRecFree(__node->right,__callback);
+            node_free_rec(__node->right,__callback);
         }
         if(__node->left != NULL){
-            nodeRecFree(__node->left,__callback);
+            node_free_rec(__node->left,__callback);
         }
 
         __callback(__node->data);
-        freeMem(__node);
+        free_mem(__node);
     }else{
         //throw exception
     }
 }
 
-byte nodeLink(node_t *__base, node_t *__tolink, int __linkdir)
+byte node_link(node_t *__base, node_t *__tolink, int __linkdir)
 {
     if(__base != NULL && __tolink != NULL){
         if(__linkdir == NODE_LINK_LEFT){
@@ -82,19 +82,19 @@ byte nodeLink(node_t *__base, node_t *__tolink, int __linkdir)
     return FALSE;
 }
 
-node_t  *nodeNew(void *__data)
+node_t  *node_new(void *__data)
 {
         node_t *__aux;
-        __aux = nodeAlloc();
+        __aux = node_alloc();
         __aux->data = __data;
         return __aux;
 }
 
-node_t  *nodeAddChild(node_t *__base, void *__data, int __linkdir)
+node_t  *node_add_child(node_t *__base, void *__data, int __linkdir)
 {
     if(__base != NULL){
         node_t *__child;
-        __child = nodeAlloc();
+        __child = node_alloc();
         __child->data = __data;
 
         if(__linkdir == NODE_LINK_LEFT){
@@ -105,17 +105,17 @@ node_t  *nodeAddChild(node_t *__base, void *__data, int __linkdir)
 
         return __child;
     }else{
-        systemHalt("Node __base not allocated");
+        system_halt("Node __base not allocated");
     }
 
     return NULL;
 }
 
-node_t  *nodeAddParent(node_t *__base, void *__data, int __linkdir)
+node_t  *node_add_parent(node_t *__base, void *__data, int __linkdir)
 {
     if(__base != NULL){
         node_t *__parent;
-        __parent = nodeAlloc();
+        __parent = node_alloc();
         __parent->data = __data;
 
         if(__linkdir == NODE_LINK_LEFT){
@@ -126,7 +126,7 @@ node_t  *nodeAddParent(node_t *__base, void *__data, int __linkdir)
 
         return __parent;
     }else{
-        systemHalt("Node __base not allocated");
+        system_halt("Node __base not allocated");
     }
 
     return NULL;

@@ -29,9 +29,10 @@
 #include "headers/iohandler.h"
 #include "headers/roisys.h"
 
+/** ROI C Stack Backtrace buffer size*/
 #define ROI_BT_BUF_SIZE 100
 
-void systemHalt(char *__message)
+void system_halt(char *__message)
 {
     int __nptrs;
     void *__backtraceBuffer[ROI_BT_BUF_SIZE];

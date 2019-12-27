@@ -36,14 +36,14 @@ typedef struct xnode_t {
 } xnode_t;
 
 /** Alloc a xnode memory */
-xnode_t  *xnodeAlloc();
+xnode_t  *xnode_alloc();
 
 /** Free a xnode allocated memory, not recursivelly*/
-void    xnodeFree(xnode_t *__xnode);
+void    xnode_free(xnode_t *__xnode);
 
 /** Free a xnode allocated memory recursivelly.
     Caution: This function is quite dangerous, use it properly.*/
-void    xnodeRecFree(xnode_t *__xnode);
+void    xnode_free_rec(xnode_t *__xnode);
 
 /*******************************************************************************
                                 TO BE REVISED
@@ -51,26 +51,26 @@ void    xnodeRecFree(xnode_t *__xnode);
 
 /** Link the xnode __tolink to the top pointer of the __base xnode.
     If succeded it returns 1, else returns 0.*/
-byte    xnodeLinkTop(xnode_t *__base, xnode_t *__tolink);
+byte    xnode_link_top(xnode_t *__base, xnode_t *__tolink);
 
 /** Link the xnode __tolink to the bottom pointer of the __base xnode.
     If succeeded it returns 1, else return 0.*/
-byte    xnodeLinkBottom(xnode_t *__base, xnode_t *__tolink);
+byte    xnode_link_bottom(xnode_t *__base, xnode_t *__tolink);
 
 /** Link the xnode __tolink to the right pointer of the __base xnode.
     If succeeded it returns 1, else return 0.*/
-byte    xnodeLinkRight(xnode_t *__base, xnode_t *__tolink);
+byte    xnode_link_right(xnode_t *__base, xnode_t *__tolink);
 
 /** Link the xnode __tolink to the left pointer of the __base xnode.
     If succeeded it returns 1, else return 0.*/
-byte    xnodeLinkLeft(xnode_t *__base, xnode_t *__tolink);
+byte    xnode_link_left(xnode_t *__base, xnode_t *__tolink);
 
 
 /******************************************************************************/
 
 /** Add the data __data to the top pointer of the __base xnode.
     If succeded it returns 1, else returns 0.*/
-byte    xnodeAddTop(xnode *__base, void *__data);
+byte    xnode_add_top(xnode *__base, void *__data);
 
 
 
