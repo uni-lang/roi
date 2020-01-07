@@ -29,9 +29,9 @@
 
    Intended to be used for all dynamic structures: trees, AST, queues, stacks.*/
 typedef struct xnode_t {
-                    *bottom,
-                    *right,
-                    *left;
+    struct xnode_t *bottom;
+    struct xnode_t *right;
+    struct xnode_t *left;
     void *data;
 } xnode_t;
 

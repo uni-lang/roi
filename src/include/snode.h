@@ -18,75 +18,52 @@
 
 *******************************************************************************/
 
-#ifndef ROI_NODE_H
-#define ROI_NODE_H
+#ifndef ROI_SNODE_H
+#define ROI_SNODE_H
 
 #include "memhandler.h"
 #include "deftypes.h"
 
 
-#define NODE_LINK_LEFT  0
-#define NODE_LINK_RIGHT 1
-
-struct node_t {
-    struct node_t   *right;
-    struct node_t   *left;
+struct snode_t {
+    struct snode_t   *right;
     void *data;
 };
 
-/** ROI Implementation of dynamic node
-    Subvars: node_t * up, bottom, right, left. void * data.
+/** ROI Implementation of dynamic snode (simple node, one link)
+    Subvars: snode_t * right. void * data.
 
-    Intended to be used for all dynamic structures: trees, AST, queues, stacks.*/
-typedef struct node_t node_t;
+    Intended to be used for simple link dynamic structures: queues, stacks.*/
+typedef struct snode_t snode_t;
 
+/**  Alloc a snode memory */
+snode_t  *snode_alloc();
 
-/**  Alloc a node memory */
-node_t  *node_alloc();
+/**  Free a snode allocated memory, not recursivelly*/
+void    snode_free(snode_t *__node);
 
-/**  Free a node allocated memory, not recursivelly*/
-void    node_free(node_t *__node);
-
-/** Free a node allocated memory recursivelly.
-    Caution: This function is quite dangerous, use it properly.*/
-//void    nodeRecFree(node_t *__node);
-
-/** Free a node allocated memory recursivelly.
+/** Free a snode allocated memory recursivelly.
     The functions then call the __callback function to free the data pointer
     Caution: This function is quite dangerous, use it properly.*/
-void    node_free_rec(node_t *__node, void (*__callback)(void *__data));
+void    snode_free_rec(snode_t *__node, void (*__callback)(void *__data));
 
 /*******************************************************************************
                                 TO BE REVISED
 *******************************************************************************/
 
-/** Link the node __tolink to the right or left pointer of the __base node.
-    __linkdir: NODE_LINK_LEFT or NODE_LINK_RIGHT
+/** Link the node __tolink to the right pointer of the __base node.
     If succeeded it returns 1, else return 0.*/
-byte    node_link(node_t *__base, node_t *__tolink, int __linkdir);
+byte    snode_link(snode_t *__base, snode_t *__tolink);
+
 
 /** Create a node with __data and return its pointer
     If succeded it returns the node's pointer, else returns NULL.*/
-node_t  *node_new(void *__data);
+snode_t  *snode_new(void *__data);
 
-/** Create a parent node with __data, link __base to its LEFT or RIGHT node
-    and returns the parent node.
-    __linkdir: NODE_LINK_LEFT or NODE_LINK_RIGHT
+/** Create a right snode with __data
     If succeded it returns the child's node, else returns NULL.*/
-node_t  *node_add_child(node_t *__base, void *__data, int __linkdir);
-
-/** Create a parent node with __data, link __base to its LEFT or RIGHT node
-    and returns the parent node.
-    __linkdir: NODE_LINK_LEFT or NODE_LINK_RIGHT
-    If succeded it returns parent's node, else returns NULL.*/
-node_t  *node_add_parent(node_t *__base, void *__data, int __linkdir);
-
+snode_t  *snode_add_right(snode_t *__base, void *__data);
 
 /******************************************************************************/
-
-
-
-
-
 
 #endif
