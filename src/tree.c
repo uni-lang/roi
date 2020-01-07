@@ -23,9 +23,9 @@
 *******************************************************************************/
 
 
-#include "headers/node.h"
-#include "headers/roisys.h"
-#include "headers/tree.h"
+#include "include/node.h"
+#include "include/roisys.h"
+#include "include/tree.h"
 
 
 void tree_inorder_rec(node_t *__root, void (*__callback)(void *__data))

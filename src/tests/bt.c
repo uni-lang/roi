@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include "../headers/tree.h"
-#include "../headers/node.h"
+#include "../include/tree.h"
+#include "../include/node.h"
 
 struct token_t{
     char operator;

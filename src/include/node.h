@@ -29,8 +29,8 @@
 #define NODE_LINK_RIGHT 1
 
 struct node_t {
-    struct node_t   *right,
-                    *left;
+    struct node_t   *right;
+    struct node_t   *left;
     void *data;
 };
 

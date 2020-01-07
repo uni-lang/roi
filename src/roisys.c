@@ -26,8 +26,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#include "headers/iohandler.h"
-#include "headers/roisys.h"
+#include "include/iohandler.h"
+#include "include/roisys.h"
 
 /** ROI C Stack Backtrace buffer size*/
 #define ROI_BT_BUF_SIZE 100

@@ -18,8 +18,8 @@
 
 *******************************************************************************/
 
-#ifndef ROI_MEMORYHANDLER_H
-#define ROI_MEMORYHANDLER_H
+#ifndef ROI_MEMHANDLER_H
+#define ROI_MEMHANDLER_H
 
 /*******************************************************************************
     external dependencies:
@@ -29,12 +29,13 @@
     #ifndef NULL
         #define NULL (void*)0x00
     #endif
+    
 /** Allocate a memory with __size bytes
     and then return its pointer*/
-void *alloc_mem(size_t __size);
+void *mem_free(size_t __size);
 
 /** Free a allocated memory.
     Returns nothing.*/
-void free_mem(void *ptr);
+void mem_free(void *ptr);
 
 #endif

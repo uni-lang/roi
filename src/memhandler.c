@@ -22,7 +22,7 @@
   source code related to the memory allocation and free
 *******************************************************************************/
 
-#include "headers/memhandler.h"
+#include "include/memhandler.h"
 
 /*******************************************************************************
     external dependencies:
@@ -30,12 +30,12 @@
 #include <stdlib.h>
 
 
-void *alloc_mem(size_t __size)
+void *mem_alloc(size_t __size)
 {
     return malloc(__size);
 }
 
-void free_mem(void *__ptr)
+void mem_free(void *__ptr)
 {
     free(__ptr);
 }

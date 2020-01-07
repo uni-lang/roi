@@ -18,9 +18,9 @@
 
 *******************************************************************************/
 
-#include "headers/parser.h"
-#include "headers/node.h"
-#include "headers/deftypes.h"
+#include "include/parser.h"
+#include "include/node.h"
+#include "include/deftypes.h"
 
 bool simple_parser(char * __str)
 {

@@ -22,11 +22,11 @@
     SOURCE FILE RELATED TO THE NODE USED IN AST, LISTS, QUEUES, STACKS...
 *******************************************************************************/
 
-#include "headers/deftypes.h"
-#include "headers/memhandler.h"
-#include "headers/node.h"
+#include "include/deftypes.h"
+#include "include/memhandler.h"
+#include "include/node.h"
 
-#include "headers/roisys.h"
+#include "include/roisys.h"
 
 node_t  *node_alloc()
 {
