@@ -33,10 +33,10 @@
 | AST                | :large_blue_circle: in progress  |
 | Lexer              | :white_circle: in planning       |
 | Parser             | :white_circle: in planning       |
-| AST Bytecode       | :black_circle: estimate          |
 | Lexical rules      | :black_circle: estimate          |
 | Syntactic rules    | :black_circle: estimate          |
 | Semantic rules     | :black_circle: estimate          |
+| AST Bytecode       | :black_circle: estimate          |
 | µUni Runtime       | :red_circle: on hold             |
 | Handlers ports     | :red_circle: on hold             |
 

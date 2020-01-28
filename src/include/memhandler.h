@@ -29,10 +29,10 @@
     #ifndef NULL
         #define NULL (void*)0x00
     #endif
-    
+
 /** Allocate a memory with __size bytes
     and then return its pointer*/
-void *mem_free(size_t __size);
+void *mem_alloc(size_t __size);
 
 /** Free a allocated memory.
     Returns nothing.*/
